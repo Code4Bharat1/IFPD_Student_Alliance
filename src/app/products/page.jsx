@@ -4,11 +4,12 @@ import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import { SlidersHorizontal, Search } from "lucide-react";
 
-const SIZE_FILTERS = ["All", '65"', '75"', '86"', '98"'];
+const SIZE_FILTERS = ["All", '65"', '75"', '86"', '98"',"110"];
 const CATEGORY_FILTERS = [
   { value: "all", label: "All" },
-  { value: "classroom", label: "Classroom" },
-  { value: "enterprise", label: "Enterprise" },
+  { value: "Normal", label: "Normal" },
+  { value: "Google EDLA without Camera", label: "EDLA Without Camera" },
+  { value: "Google EDLA with Camera", label: "EDLA With Camera" },
 ];
 
 export default function ProductsPage() {
@@ -17,28 +18,39 @@ export default function ProductsPage() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
 
-  const filtered = useMemo(() => {
-    let list = [...products];
+const filtered = useMemo(() => {
+  let list = Array.isArray(products) ? [...products] : [];
 
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter(
-        (p) => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q),
-      );
-    }
-    if (sizeFilter !== "All") {
-      const size = parseInt(sizeFilter);
-      list = list.filter((p) => p.size === size);
-    }
-    if (categoryFilter !== "all") {
-      list = list.filter((p) => p.category === categoryFilter);
-    }
-    if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
-    else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
+  if (search.trim()) {
+    const q = search.toLowerCase();
+    list = list.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q)
+    );
+  }
 
-    return list;
-  }, [sizeFilter, categoryFilter, search, sort]);
+  if (sizeFilter !== "All") {
+    const size = parseInt(sizeFilter);
+    list = list.filter((p) => p.size === size);
+  }
 
+  if (categoryFilter !== "all") {
+    list = list.filter((p) => p.subCategory === categoryFilter);
+  }
+
+  if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
+  else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
+
+  return list;
+}, [sizeFilter, categoryFilter, search, sort]);
+const groupedProducts = useMemo(() => {
+  return {
+    Normal: filtered.filter(p => p.subCategory === "Normal"),
+    "Google EDLA without Camera": filtered.filter(p => p.subCategory === "Google EDLA without Camera"),
+    "Google EDLA with Camera": filtered.filter(p => p.subCategory === "Google EDLA with Camera"),
+  };
+}, [filtered]);
   return (
     <div className="min-h-screen bg-bg-primary">
       {/* Page header */}
@@ -125,13 +137,30 @@ export default function ProductsPage() {
         </p>
 
         {/* Grid */}
-        {filtered.length > 0 ? (
+       {filtered.length > 0 ? (
+  <>
+    {Object.entries(groupedProducts).map(([section, items]) =>
+      items.length > 0 && (
+        <div key={section} className="mb-12">
+          
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            {section}
+            <span className="text-sm bg-gray-200 px-2 py-1 rounded">
+              {items.length}
+            </span>
+          </h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filtered.map((product) => (
+            {items.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        ) : (
+
+        </div>
+      )
+    )}
+  </>
+) : (
           <div className="text-center py-20">
             <div className="text-5xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-text-heading mb-2">No products found</h3>

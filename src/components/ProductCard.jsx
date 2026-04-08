@@ -63,14 +63,14 @@ export default function ProductCard({ product }) {
 
         {/* Price */}
         <div className="mt-auto">
-          <div className="flex items-baseline gap-2 mb-4">
+          {/* <div className="flex items-baseline gap-2 mb-4">
             <span className="text-2xl font-bold text-brand-primary">
               {formatCurrency(product.price)}
             </span>
             <span className="text-sm text-text-tertiary line-through">
               {formatCurrency(product.originalPrice)}
             </span>
-          </div>
+          </div> */}
 
           <Link
             href="/contact"
