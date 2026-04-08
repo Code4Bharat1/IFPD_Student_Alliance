@@ -1,15 +1,54 @@
 import Link from "next/link";
-import { products, features } from "@/data/products";
+import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import HeroImage from "@/components/HeroImage";
 import { ArrowRight, PlayCircle, Star } from "lucide-react";
+import {
+  FiMonitor,
+  FiEdit3,
+  FiUsers,
+  FiWifi,
+  FiSettings,
+  FiLayers,
+} from "react-icons/fi";
 
 export const metadata = {
   title: "Home | IFPD Student Alliance",
   description:
     "Interactive Flat Panel Displays for modern classrooms — explore our range of 65\" to 98\" IFPD panels.",
 };
-
+const features = [
+  {
+    icon: <FiMonitor />,
+    title: "4K Ultra HD Display",
+    description: "Crystal clear visuals for better classroom engagement.",
+  },
+  {
+    icon: <FiEdit3 />,
+    title: "Multi-Touch Writing",
+    description: "Smooth writing experience with multiple touch points.",
+  },
+  {
+    icon: <FiUsers />,
+    title: "Collaborative Learning",
+    description: "Multiple students can interact simultaneously.",
+  },
+  {
+    icon: <FiWifi />,
+    title: "Wireless Connectivity",
+    description: "Connect devices easily without cables.",
+  },
+  {
+    icon: <FiSettings />,
+    title: "Easy Integration",
+    description: "Works with all major teaching tools & software.",
+  },
+  {
+    icon: <FiLayers />,
+    title: "All-in-One Solution",
+    description: "Built-in Android system for seamless teaching.",
+  },
+];
 export default function HomePage() {
   const featured = products.slice(0, 3);
 
@@ -114,7 +153,10 @@ export default function HomePage() {
                 key={f.title}
                 className="card-glow flex items-start gap-4 p-6 rounded-2xl border border-border-primary bg-bg-card"
               >
-                <div className="text-3xl shrink-0">{f.icon}</div>
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl text-white text-xl shrink-0"
+                  style={{ background: "var(--brand-gradient)" }}>
+                  {f.icon}
+                </div>
                 <div>
                   <h3 className="font-bold text-text-heading mb-1">{f.title}</h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{f.description}</p>

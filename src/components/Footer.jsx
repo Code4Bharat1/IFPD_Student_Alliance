@@ -9,7 +9,7 @@ const footerLinks = {
   about: [
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
-    { name: "Contact Us", href: "/contact" },
+    // { name: "Contact Us", href: "/contact" },
     { name: "Get a Quote", href: "/contact" },
   ],
   categories: [
@@ -19,6 +19,28 @@ const footerLinks = {
     { name: 'IFPD 98"', href: "/products" },
   ],
 };
+const socialLinks = [
+  {
+    name: "Twitter",
+    src: "/images/x.png",
+    href: "https://x.com/studentaliance",
+  },
+  {
+    name: "Facebook",
+    src: "/images/facebook.png",
+    href: "https://www.facebook.com/studentalliancellp/",
+  },
+  {
+    name: "LinkedIn",
+    src: "/images/linkedin.jpg",
+    href: "https://www.linkedin.com/company/student-alliance-llp/",
+  },
+  {
+    name: "Instagram",
+    src: "/images/insta.jpg",
+    href: "https://www.instagram.com/studentalliance",
+  },
+];
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -37,30 +59,51 @@ const Footer = () => {
           {/* Logo & About */}
           <motion.div {...fadeUp(0.1)} className="lg:col-span-3">
             <Link href="/" className="flex items-center gap-2">
-              <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 text-white font-bold text-sm"
-                style={{ background: "var(--brand-gradient)" }}
-              >
-                IF
-              </div>
-              <span className="font-bold text-lg">
+              <Image
+                src="/logo.jpg"
+                alt="IFPD Logo"
+                width={90}
+                height={90}
+                className="object-cover"
+              />
+              {/* <span className="font-bold text-lg">
                 IFPD{" "}
-                <span className="font-normal text-white/50">Student Alliance</span>
-              </span>
+                <span className="font-normal text-white/50">
+                  Student Alliance
+                </span>
+              </span> */}
             </Link>
-
             <p className="text-white/50 leading-relaxed text-sm lg:max-w-sm mt-6">
-              Student Alliance is your trusted partner for interactive classroom
-              technology. Our Interactive Flat Panel Displays (IFPD) bring
-              4K touch-enabled education to schools and enterprises across India.
+              Student Alliance is your go-to platform for innovative educational
+              technology, STEM learning kits, and digital solutions that inspire
+              creativity.
             </p>
 
+            <div className="flex items-center gap-4 mt-6">
+              {socialLinks.map((social, i) => (
+                <Link
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform duration-300"
+                >
+                  <Image
+                    src={social.src}
+                    alt={social.name}
+                    width={28}
+                    height={28}
+                    className="rounded-md object-cover"
+                  />
+                </Link>
+              ))}
+            </div>
             {/* Contact snippet */}
-            <div className="mt-6 space-y-2 text-sm text-white/50">
+            {/* <div className="mt-6 space-y-2 text-sm text-white/50">
               <p>📞 +91 98765 43210</p>
               <p>✉️ info@studentalliance.in</p>
               <p>📍 Mumbai, Maharashtra, India</p>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Quick Links */}
@@ -108,10 +151,28 @@ const Footer = () => {
           className="mt-10 border-t border-white/10 text-center pt-6 text-white/40 text-sm"
         >
           <p>
-            © 2011–{new Date().getFullYear()} Student Alliance LLP. All rights reserved.
+            © 2011–{new Date().getFullYear()}{" "}
+            <a
+              href="https://studentalliancellp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-brand-accent underline transition-colors"
+            >
+              Student Alliance LLP
+            </a>
+            . All rights reserved.
           </p>
+
           <p className="mt-1 text-xs text-white/30">
-            Designed with ❤️ by Student Alliance Team
+            Designed with ❤️ by{" "}
+            <a
+              href="https://studentalliancellp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-accent underline"
+            >
+              Student Alliance Team
+            </a>
           </p>
         </motion.div>
       </div>

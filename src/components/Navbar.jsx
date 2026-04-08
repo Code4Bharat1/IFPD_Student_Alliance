@@ -16,7 +16,7 @@ import {
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/contact", label: "Contact Us" },
+  // { href: "/contact", label: "Contact Us" },
 ];
 
 export default function Navbar() {
@@ -41,40 +41,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "glass py-2"
           : "bg-bg-navbar/95 py-4 border-b border-border-primary"
-      }`}
+        }`}
       style={scrolled ? { boxShadow: "0 4px 30px rgba(0,0,0,0.08)" } : undefined}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-white font-bold text-sm"
-                  style={{ background: "var(--brand-gradient)" }}
-                >
-                  IF
-                </div>
-                <span
-                  className="font-bold text-base leading-tight"
-                  style={{ color: "var(--brand-primary)" }}
-                >
-                  IFPD{" "}
-                  <span
-                    className="font-normal"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    Student Alliance
-                  </span>
-                </span>
-              </div>
-            </motion.div>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/logo.jpg"
+              alt="IFPD Logo"
+              width={90}
+              height={90}
+              className="object-cover"
+            />
+            
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
@@ -82,11 +67,10 @@ export default function Navbar() {
               <Link
                 key={label}
                 href={href}
-                className={`nav-link px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-                  isActive(href)
+                className={`nav-link px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${isActive(href)
                     ? "text-brand-primary bg-brand-primary/10 active"
                     : "text-text-secondary hover:text-brand-primary hover:bg-bg-hover"
-                }`}
+                  }`}
               >
                 {label}
               </Link>
@@ -158,11 +142,10 @@ export default function Navbar() {
                   <Link
                     key={label}
                     href={href}
-                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                      isActive(href)
+                    className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${isActive(href)
                         ? "text-brand-primary bg-brand-primary/10"
                         : "text-text-secondary hover:text-brand-primary hover:bg-bg-hover"
-                    }`}
+                      }`}
                   >
                     {label}
                   </Link>
