@@ -56,9 +56,9 @@ const groupedProducts = useMemo(() => {
       {/* Page header */}
       <div className="bg-bg-section border-b border-border-primary py-10 px-4 text-center mb-10">
         <h1 className="text-4xl font-extrabold text-text-heading mb-3">Our IFPD Products</h1>
-        <p className="text-text-secondary max-w-xl mx-auto">
-          Browse our complete range of Interactive Flat Panel Displays — from 65&quot; classroom panels to 98&quot; enterprise titans.
-        </p>
+        <p className="text-text-secondary max-w-xl mx-auto mb-6">
+  Explore our full range of Interactive Flat Panel Displays designed for classrooms, offices, and enterprise environments — delivering powerful performance and seamless collaboration.
+</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
