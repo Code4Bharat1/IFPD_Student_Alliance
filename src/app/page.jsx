@@ -128,7 +128,7 @@ export default function HomePage() {
                 style={{ backgroundColor: "var(--brand-accent)" }}
               />
               <div className="relative w-full max-w-md">
-                <HeroImage src="/images/65_inch.png" alt="IFPD 65-inch display" />
+                <HeroImage src="/6.jpg" alt="IFPD 65-inch display" />
               </div>
             </div>
           </div>
