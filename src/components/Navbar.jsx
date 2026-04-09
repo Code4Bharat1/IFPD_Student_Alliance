@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="IFPD Logo"
               width={90}
               height={90}

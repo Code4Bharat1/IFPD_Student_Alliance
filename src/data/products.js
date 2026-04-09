@@ -8,7 +8,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 99000,
     "originalPrice": 275000,
-    "image": "/65.jpg",
+    "image": "/6.jpg",
     "features": [
       "Android 14 OS (Upgradeable to Android 16)",
       "4GB RAM + 32GB Storage",
@@ -21,14 +21,14 @@ export const products =[
   },
   {
     "id": 2,
-    "name": "75 Inch IFPD - Interactive Flat Panel Displayl",
+    "name": "75 Inch IFPD - Interactive Flat Panel Display",
     "size": 75,
     "category": "IFPD",
     "subCategory": "Normal",
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 124950,
     "originalPrice": 350000,
-    "image": "/75.jpg",
+    "image": "/7.jpg",
     "features": [
       "Android 14 OS (Upgradeable to Android 16)",
       "4K UHD Display",
@@ -48,7 +48,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 157651,
     "originalPrice": 476000,
-    "image": "/86.jpg",
+    "image": "/1.jpg",
     "features": [
       "Android 14 OS (Upgradeable to Android 16)",
       "4K Ultra HD Panel",
@@ -68,7 +68,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 489975,
     "originalPrice": 750000,
-    "image": "/98.jpg",
+    "image": "/2.jpg",
     "features": [
       "Android 14 OS (Upgradeable to Android 16)",
       "4K Ultra HD Display",
@@ -109,7 +109,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 120000,
     "originalPrice": 300000,
-    "image": "/65.jpg",
+    "image": "/6.jpg",
     "features": [
       "Google EDLA Certified",
       "Android 14 (Upgradeable to Android 16)",
@@ -129,7 +129,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 145000,
     "originalPrice": 350000,
-    "image": "/75.jpg",
+    "image": "/7.jpg",
     "features": [
       "Google EDLA Certified",
       "Android 14 (Upgradeable to Android 16)",
@@ -149,7 +149,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 185000,
     "originalPrice": 476000,
-    "image": "/86.jpg",
+    "image": "/1.jpg",
     "features": [
       "Google EDLA Certified",
       "Android 14 (Upgradeable to Android 16)",
@@ -169,7 +169,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 550000,
     "originalPrice": 750000,
-    "image": "/98.jpg",
+    "image": "/2.jpg",
     "features": [
       "Google EDLA Certified",
       "Android 14 (Upgradeable to Android 16)",
@@ -210,7 +210,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 135000,
     "originalPrice": 320000,
-    "image": "/65-inch_withcamer.png",
+    "image": "/61.jpg",
     "features": [
       "Built-in AI Camera",
       "Google EDLA Certified",
@@ -230,7 +230,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 165000,
     "originalPrice": 370000,
-    "image": "/75-inch.jpg",
+    "image": "/75.1.jpeg",
     "features": [
       "AI Camera + Mic",
       "Google EDLA Certified",
@@ -250,7 +250,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 210000,
     "originalPrice": 476000,
-    "image": "/86-inch.jpg",
+    "image": "/86.1.jpeg",
     "features": [
       "AI Camera System",
       "Google EDLA Certified",
@@ -270,7 +270,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 600000,
     "originalPrice": 750000,
-    "image": "/98-inch.jpg",
+    "image": "/96.1.jpeg",
     "features": [
       "AI Camera + Speaker System",
       "Google EDLA Certified",
@@ -290,7 +290,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 1100000,
     "originalPrice": 1300000,
-    "image": "/110-inch.jpg",
+    "image": "/110.jpeg",
     "features": [
       "AI Camera + Mic Array",
       "Google EDLA Certified",
