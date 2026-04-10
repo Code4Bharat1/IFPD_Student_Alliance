@@ -88,7 +88,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 850000,
     "originalPrice": 1200000,
-    "image": "/110.jpg",
+    "image": "/100.jpg",
     "features": [
       "Android 14 OS (Upgradeable to Android 16)",
       "Ultra Large 4K Display",
@@ -189,7 +189,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 950000,
     "originalPrice": 1200000,
-    "image": "/110.jpg",
+    "image": "/100.jpg",
     "features": [
       "Google EDLA Certified",
       "Android 14 (Upgradeable to Android 16)",
