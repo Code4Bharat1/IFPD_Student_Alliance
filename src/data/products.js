@@ -230,7 +230,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 165000,
     "originalPrice": 370000,
-    "image": "/75.1.jpeg",
+    "image": "/75.2.jpeg",
     "features": [
       "AI Camera + Mic",
       "Google EDLA Certified",
@@ -250,7 +250,7 @@ export const products =[
     "version": "Android 14 (Upgradeable to Android 16)",
     "price": 210000,
     "originalPrice": 476000,
-    "image": "/86.1.jpeg",
+    "image": "/86.2.jpeg",
     "features": [
       "AI Camera System",
       "Google EDLA Certified",
