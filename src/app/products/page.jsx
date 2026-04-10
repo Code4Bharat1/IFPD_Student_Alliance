@@ -8,8 +8,8 @@ const SIZE_FILTERS = ["All", '65"', '75"', '86"', '98"',"110"];
 const CATEGORY_FILTERS = [
   { value: "all", label: "All" },
   { value: "Normal", label: "IFPD" },
-  { value: "Google EDLA with Camera", label: "EDLA With Camera" },
-  { value: "Google EDLA without Camera", label: "EDLA Without Camera" },
+  { value: "Google EDLA With Camera", label: "EDLA With Camera" },
+  { value: "Google EDLA Without Camera", label: "EDLA Without Camera" },
 ];
 
 export default function ProductsPage() {
@@ -46,9 +46,9 @@ const filtered = useMemo(() => {
 }, [sizeFilter, categoryFilter, search, sort]);
 const groupedProducts = useMemo(() => {
   return {
-    IFPD: filtered.filter(p => p.subCategory === "Normal"),
-    "Google EDLA with Camera": filtered.filter(p => p.subCategory === "Google EDLA with Camera"),
-    "Google EDLA without Camera": filtered.filter(p => p.subCategory === "Google EDLA without Camera"),
+     "Interactive Flat Panel Display (IFPD)": filtered.filter(p => p.subCategory === "Normal"),
+    "Google EDLA With Camera": filtered.filter(p => p.subCategory === "Google EDLA with Camera"),
+    "Google EDLA Without Camera": filtered.filter(p => p.subCategory === "Google EDLA without Camera"),
   };
 }, [filtered]);
   return (
