@@ -17,6 +17,7 @@ const footerLinks = {
     { name: 'IFPD 75"', href: "/products" },
     { name: 'IFPD 86"', href: "/products" },
     { name: 'IFPD 98"', href: "/products" },
+    { name: 'IFPD 110"', href: "/products" },
   ],
 };
 const socialLinks = [
@@ -62,8 +63,8 @@ const Footer = () => {
               <Image
                 src="/logo.jpg"
                 alt="IFPD Logo"
-                width={90}
-                height={90}
+                width={100}
+                height={100}
                 className="object-cover"
               />
               {/* <span className="font-bold text-lg">

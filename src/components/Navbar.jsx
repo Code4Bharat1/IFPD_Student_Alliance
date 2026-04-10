@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Right Actions */}
           <div className="flex items-center gap-2">
             {/* Theme Toggle */}
-            {mounted && (
+            {/* {mounted && (
               <motion.button
                 onClick={toggleTheme}
                 whileHover={{ scale: 1.05 }}
@@ -100,7 +100,7 @@ export default function Navbar() {
                   </motion.div>
                 </AnimatePresence>
               </motion.button>
-            )}
+            )} */}
 
             {/* Get a Quote CTA */}
             <Link href="/contact" className="hidden sm:block">
